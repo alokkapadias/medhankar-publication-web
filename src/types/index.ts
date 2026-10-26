@@ -90,16 +90,6 @@ export interface PublishingEnquiry {
   createdAt?: string;
 }
 
-export type CookiePreferenceType = 'all' | 'necessary' | 'custom';
-
-export interface CookiePreferences {
-  type: CookiePreferenceType;
-  necessary: boolean; // Always true
-  analytics: boolean;
-  functional: boolean;
-  updatedAt: string;
-}
-
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -115,4 +105,3 @@ declare global {
     }
   }
 }
-

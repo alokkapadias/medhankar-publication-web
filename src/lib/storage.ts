@@ -3,10 +3,9 @@
 // Local Storage Repository & Preferences Abstraction
 // ==============================================================================
 
-import type { CookiePreferences, SavedBook } from '../types';
+import type { SavedBook } from '../types';
 
 const SAVED_BOOKS_STORAGE_KEY = 'medhankar_saved_books_v1';
-const COOKIE_PREFS_STORAGE_KEY = 'medhankar_cookie_preferences_v1';
 const DEMO_USER_SESSION_KEY = 'medhankar_demo_session_v1';
 
 // -----------------------------------------------------------------------------
@@ -54,29 +53,6 @@ export const savedBooksRepository = {
     } catch (err) {
       console.error('Failed to toggle saved book:', err);
       return false;
-    }
-  },
-};
-
-// -----------------------------------------------------------------------------
-// Cookie Consent Preferences
-// -----------------------------------------------------------------------------
-export const cookieConsentRepository = {
-  getPreferences(): CookiePreferences | null {
-    try {
-      const data = localStorage.getItem(COOKIE_PREFS_STORAGE_KEY);
-      if (!data) return null;
-      return JSON.parse(data);
-    } catch {
-      return null;
-    }
-  },
-
-  savePreferences(prefs: CookiePreferences): void {
-    try {
-      localStorage.setItem(COOKIE_PREFS_STORAGE_KEY, JSON.stringify(prefs));
-    } catch (err) {
-      console.error('Failed to save cookie preferences:', err);
     }
   },
 };

@@ -65,7 +65,7 @@ export const PrivacyPage: React.FC = () => {
 
             <div>
               <h2 style={{ fontSize: '1.25rem', color: 'var(--color-deep-navy)', marginBottom: '10px' }}>
-                3. Cookie Consent &amp; Local Storage
+                3. Local Storage
               </h2>
               <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-secondary)', lineHeight: 1.65, marginBottom: '10px' }}>
                 We use browser localStorage exclusively for essential functional purposes:
@@ -73,7 +73,6 @@ export const PrivacyPage: React.FC = () => {
               <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.875rem', color: 'var(--color-text-secondary)' }}>
                 <li>Maintaining authentication tokens across browser sessions.</li>
                 <li>Storing your bookmarked titles and reader font preferences locally on your device.</li>
-                <li>Persisting your explicit cookie consent settings.</li>
               </ul>
             </div>
 
